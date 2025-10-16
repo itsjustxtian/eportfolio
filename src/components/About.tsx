@@ -4,23 +4,23 @@ import React from 'react';
 const skills = [
 	{
 		name: 'Javascript',
-		png: 'https://img.icons8.com/?size=100&id=108784&format=png&color=000000',
+		png: '/tech/javascript.png',
 	},
 	{
 		name: 'HTML',
-		png: 'https://img.icons8.com/?size=100&id=20909&format=png&color=000000',
+		png: '/tech/html-5.svg',
 	},
 	{
 		name: 'C++',
-		png: 'https://img.icons8.com/?size=100&id=40669&format=png&color=000000',
+		png: '/tech/cplusplus.svg',
 	},
 	{
 		name: 'CSS',
-		png: 'https://img.icons8.com/?size=100&id=21278&format=png&color=000000',
+		png: '/tech/css-logo.svg',
 	},
 	{
 		name: 'Tailwind CSS',
-		png: 'https://img.icons8.com/?size=100&id=CIAZz2CYc6Kc&format=png&color=000000',
+		png: '/tech/tailwindcss.svg',
 	},
 	/*{
 		name: 'Sass',
@@ -28,43 +28,43 @@ const skills = [
 	},*/
 	{
 		name: 'Node.js',
-		png: 'https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000',
+		png: '/tech/node-js-96.png',
 	},
 	{
 		name: 'Next.js',
-		png: 'https://img.icons8.com/?size=100&id=MWiBjkuHeMVq&format=png&color=000000',
+		png: '/tech/next.js-96.png',
 	},
 	{
 		name: 'React',
-		png: 'https://img.icons8.com/?size=100&id=123603&format=png&color=000000',
+		png: '/tech/react-logo.png',
 	},
-	/*{
+	{
 		name: 'Flutter',
-		png: 'https://storage.googleapis.com/cms-storage-bucket/icon_flutter.0dbfcc7a59cd1cf16282.png',
-	},*/
-	/*{
+		png: '/tech/flutter-logo.svg',
+	},
+	{
 		name: 'Astro.js',
-		png: 'https://img.icons8.com/?size=100&id=kXuRhjMIeKhk&format=png&color=000000',
-	},*/
+		png: '/tech/astro-logo.png',
+	},
 	{
 		name: 'Git',
-		png: 'https://img.icons8.com/?size=100&id=20906&format=png&color=000000',
+		png: '/tech/git-logo.svg',
 	},
 	{
 		name: 'Figma',
-		png: 'https://img.icons8.com/?size=100&id=zfHRZ6i1Wg0U&format=png&color=000000',
+		png: '/tech/figma-logo.svg',
 	},
 	{
 		name: 'Google Firebase',
-		png: 'https://img.icons8.com/?size=100&id=62452&format=png&color=000000',
+		png: '/tech/firebase-logo.svg',
 	},
-	/*{
+	{
 		name: 'Supabase',
-		png: 'https://img.icons8.com/?size=100&id=sH0rW2TvYdr9&format=png&color=000000',
-	},*/
+		png: '/tech/supabase-logo.png',
+	},
 	{
 		name: 'Mongodb',
-		png: 'https://img.icons8.com/?size=100&id=B403GJErHZpx&format=png&color=000000',
+		png: '/tech/mongo-logo.png',
 	},
 ];
 
@@ -82,7 +82,17 @@ const About = () => {
 
 	const SkillCard = ({ skill }: { skill: Skill }) => (
 		<div className="flex flex-col items-center justify-center h-30 w-30 hover:scale-110 transition-all duration-250 border-2 rounded-lg">
-			<Image src={skill.png} alt={skill.name} className="h-20 w-20" />
+			{skill.png && (
+				<div className="relative h-20 w-20">
+					<Image
+						src={skill.png}
+						alt={skill.name}
+						fill
+						className="object-contain"
+					/>
+				</div>
+			)}
+
 			<p className="uppercase font-cal-sans text-sm text-center">
 				{skill.name}
 			</p>
