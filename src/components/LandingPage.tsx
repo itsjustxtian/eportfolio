@@ -17,7 +17,7 @@ const LandingPage = () => {
 					typingSpeed={75}
 					pauseDuration={1500}
 					showCursor={true}
-					className="text-4xl md:text-6xl font-bold text-center max-w-screen"
+					className="text-4xl md:text-6xl font-extrabold text-center max-w-screen"
 					cursorClassName="h-8 md:h-12"
 					textColors={['#ffcf99']}
 					variableSpeed={{ min: 50, max: 120 }}
@@ -29,9 +29,14 @@ const LandingPage = () => {
 				className="flex flex-col justify-center items-center gap-6 z-5 mx-[10rem]"
 			>
 				<div className="flex flex-col md:flex-row justify-center items-center gap-6">
-					<button className="text-nowrap cursor-pointer flex items-center gap-2 px-4 py-2 bg-white text-black hover:bg-white/80 hover:scale-102 transition-all duration-250 rounded-md">
-						<FileUser /> <p>Download CV</p>
-					</button>
+					<a
+						href="/Christian-Ocon-CV.pdf"
+						download
+						className="text-nowrap cursor-pointer flex items-center gap-2 px-4 py-2 bg-white text-black hover:bg-white/80 hover:scale-102 transition-all duration-250 rounded-md"
+					>
+						<FileUser />
+						<p>Download CV</p>
+					</a>
 					<Link
 						href="#contact"
 						scroll

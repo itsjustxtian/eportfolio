@@ -25,7 +25,6 @@ export default function Home() {
 					<Contact />
 				</SectionWithStars>
 			</main>
-			<footer></footer>
 		</div>
 	);
 }
