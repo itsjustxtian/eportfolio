@@ -62,13 +62,16 @@ const projects: Project[] = [
 		images: [
 			'/demo/defect-vision-dashboard.png',
 			'/demo/defect-vision-start-scanning.png',
+			'/demo/defect-vision-reports-table.png',
 			'/demo/defect-vision-show-image.png',
+			'/demo/defect-vision-demo.gif',
 		],
 		highlights: [
 			'Established secure communication between the web app and Raspberry Pi using Ngrok tunnels and REST APIs to trigger device-side scanning commands.',
 			"Integrated Roboflow's computer vision API to analyze motherboard images and detect defects with high accuracy.",
 			'Designed a responsive UI using Shadcn.ui to display scan results and defect classifications in a user-friendly dashboard.',
 			'Implemented backend logic with Node.js and MongoDB to store, retrieve, and manage scan data efficiently.',
+			'Integrated an "Insight" feature which runs the image on OpenAI for an AI-generated analysis and defect detection report.',
 		],
 	},
 ];
