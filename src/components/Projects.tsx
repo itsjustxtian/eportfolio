@@ -8,6 +8,7 @@ import {
 	CarouselPrevious,
 } from '@/components/ui/carousel';
 import Image from 'next/image';
+import ProjectDialogue from './components/ProjectDialogue';
 
 type Project = {
 	name: string;
@@ -78,7 +79,7 @@ const projects: Project[] = [
 
 const Projects = () => {
 	return (
-		<div className="flex flex-col gap-y-6">
+		<div className="flex flex-col min-h-screen justify-center gap-y-6">
 			<h1 className="text-right text-4xl md:text-6xl font-cal-sans my-6">
 				Projects
 			</h1>
@@ -87,7 +88,9 @@ const Projects = () => {
 					<div key={i} className="grid md:grid-cols-3">
 						<div
 							id="carousel"
-							className="md:col-span-2 md:px-20 flex items-center"
+							className={`md:col-span-2 md:px-20 flex items-center ${
+								i % 2 === 0 ? 'order-1' : 'order-2'
+							}`}
 						>
 							<div className="relative w-full max-h-[500px]">
 								<Carousel className="w-full h-full">
@@ -96,12 +99,7 @@ const Projects = () => {
 											<CarouselItem key={index}>
 												<div className="p-1">
 													<div className="relative w-full min-h-[300px]">
-														<Image
-															src={image}
-															alt={`Project image ${index + 1}`}
-															fill
-															className="object-contain rounded-md"
-														/>
+														<ProjectDialogue image={image} index={index} />
 													</div>
 												</div>
 											</CarouselItem>
@@ -112,17 +110,30 @@ const Projects = () => {
 								</Carousel>
 							</div>
 						</div>
-						<div id="info" className="col-span-1 flex-col space-y-4">
-							<h1 className="text-xl font-bold">{project.name}</h1>
-							<p className="text-justify indent-5">{project.description}</p>
+
+						<div
+							id="info"
+							className={`col-span-1 flex-col space-y-[32px] ${
+								i % 2 === 0 ? 'order-2' : 'order-1'
+							}`}
+						>
+							<div className="flex flex-col space-y-[16px]">
+								<h1 className="text-2xl font-bold">{project.name}</h1>
+								<p className="text-justify indent-5">{project.description}</p>
+							</div>
 							<p>
-								<strong>Technologies Used:</strong>{' '}
+								<p className="text-xl">
+									<strong>Technologies Used:</strong>
+								</p>{' '}
 								{project.technologies.join(', ')}
 							</p>
 							{project.highlights && (
 								<div id="highlights">
-									<h2>Highlights:</h2>
-									<ul className="list-disc pl-5">
+									<p className="text-xl">
+										<strong>Highlights:</strong>
+									</p>
+									<ul className="list-disc pl-5 space-y-[16px]">
+										<ul className="list-disc pl-5" />
 										{project.highlights.map((highlight, i) => (
 											<li key={i}>{highlight}</li>
 										))}
@@ -141,7 +152,6 @@ const Projects = () => {
 										Live URL <Globe />
 									</a>
 								)}
-
 								{project.repoUrl && (
 									<a
 										href={project.repoUrl}

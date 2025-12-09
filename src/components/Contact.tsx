@@ -3,7 +3,7 @@ import { Github, Mail } from 'lucide-react';
 
 const Contact = () => {
 	return (
-		<div className="flex flex-col gap-y-6 mb-6">
+		<div className="flex flex-col gap-y-6 mb-6 min-h-[50vh] justify-center">
 			<h1 className="text-left text-4xl md:text-6xl font-cal-sans my-6">
 				Contact
 			</h1>

@@ -100,7 +100,7 @@ const About = () => {
 	);
 
 	return (
-		<div className="flex flex-col gap-y-6">
+		<div className="flex flex-col min-h-screen justify-center gap-y-6">
 			<h1 className="text-right text-4xl md:text-6xl font-cal-sans my-6">
 				About
 			</h1>
@@ -127,19 +127,11 @@ const About = () => {
 					id="description"
 					className="flex flex-col md:px-30 justify-center text-md text-justify leading-8"
 				>
-					<p className="indent-8">
-						Hi, I&apos;m Christian — a full-stack developer who finds comfort in
-						solving problems and joy in learning something new every day.
-						Whether it&apos;s debugging a stubborn API route, refining a UI
-						layout, or exploring a fresh framework, I thrive on the challenge
-						and the clarity that comes with cracking complex systems.
-					</p>
-					<p className="indent-8">
-						I approach development with curiosity and care, always aiming to
-						build clean, scalable solutions that feel intuitive to use and
-						satisfying to maintain. My favorite part of the process? That moment
-						when everything clicks — when the code works, the architecture makes
-						sense, and the user experience feels just right.
+					<p className="indent-8 md:text-2xl">
+						I am a full-stack developer who likes to code and turn ideas into
+						reality. I love looking at a client's proposed design or presenting
+						some of my own and then collaborate on how we can develop those
+						ideas further.
 					</p>
 				</div>
 			</div>

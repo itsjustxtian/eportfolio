@@ -43,7 +43,7 @@ const NavBar = () => {
 
 	return (
 		<div
-			className={`hidden md:flex justify-end items-center gap-8 sticky top-0 px-[10rem] h-[6rem] font-poppins text-lg z-[100] transition-all duration-250 ${
+			className={`hidden md:flex justify-end items-center gap-8 sticky top-0 px-[10rem] h-[6rem] font-poppins text-lg z-[50] transition-all duration-250 ${
 				scrolled ? 'bg-foreground/5 backdrop-blur-md shadow' : ''
 			}`}
 		>

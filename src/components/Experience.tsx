@@ -43,10 +43,12 @@ const ExperienceCard = ({ experience }: { experience: experienceType }) => {
 				<p>-</p>
 				<h3 className="italic">{experience.endDate}</h3>
 			</div>
-			<div id="responsibilities">
+			<div id="responsibilities" className="max-w-[600px]">
 				<ul className="list-disc pl-5">
 					{experience.responsibilities.map((responsibility, i) => (
-						<li key={i}>{responsibility}</li>
+						<li key={i}>
+							<p className="text-justify">{responsibility}</p>
+						</li>
 					))}
 				</ul>
 			</div>
@@ -56,7 +58,7 @@ const ExperienceCard = ({ experience }: { experience: experienceType }) => {
 
 const Experience = () => {
 	return (
-		<div className="flex flex-col">
+		<div className="flex flex-col min-h-screen justify-center">
 			<div id="section-title">
 				<h1 className="text-left text-4xl md:text-6xl font-cal-sans my-6">
 					Experience
