@@ -47,6 +47,23 @@ const projects: Project[] = [
 		],
 	},
 	{
+		name: 'Wuthering Waves Data Bank',
+		description:
+			'An updated version of the Video Game Inventory/Ascension Planner using VueJS and Supabase.',
+		technologies: ['Vue.js', 'CSS', 'Shadcn.vue', 'Supabase'],
+		liveUrl: 'https://wuwa-databank.netlify.app',
+		repoUrl: 'https://github.com/itsjustxtian/community-system-vue',
+		images: [
+			'/demo/data-bank-landing.png',
+			'/demo/data-bank-characters.png',
+			'/demo/data-bank-items.png',
+			'/demo/data-bank-empty.png',
+		],
+		highlights: [
+			"This is an ongoing project I made to explore and hone my skills in VueJS, in using Supabase's REST APIs, and in designing components.",
+		],
+	},
+	{
 		name: 'DefectVision: An AI-Assisted Defect Detection System for Computer Motherboards',
 		description:
 			'DefectVision is a full-stack web application designed to interface with Raspberry Pi devices for real-time motherboard defect detection. It stores scan results, manages device communication, and leverages AI-powered image analysis.',
@@ -121,12 +138,12 @@ const Projects = () => {
 								<h1 className="text-2xl font-bold">{project.name}</h1>
 								<p className="text-justify indent-5">{project.description}</p>
 							</div>
-							<p>
+							<div>
 								<p className="text-xl">
 									<strong>Technologies Used:</strong>
 								</p>{' '}
 								{project.technologies.join(', ')}
-							</p>
+							</div>
 							{project.highlights && (
 								<div id="highlights">
 									<p className="text-xl">

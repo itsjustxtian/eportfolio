@@ -22,10 +22,10 @@ const skills = [
 		name: 'Tailwind CSS',
 		png: '/tech/tailwindcss.svg',
 	},
-	/*{
-		name: 'Sass',
-		png: 'https://img.icons8.com/?size=100&id=QBqFNfPPB2Kx&format=png&color=000000',
-	},*/
+	{
+		name: 'VueJS',
+		png: '/tech/vue-js-logo.png',
+	},
 	{
 		name: 'Node.js',
 		png: '/tech/node-js-96.png',
